@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherWise - Smart Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="weather-container">
+        <header>
+            <h1><i class="fas fa-cloud-sun"></i> WeatherWise</h1>
+            <div class="search-container">
+                <input type="text" id="city-input" placeholder="Enter city name">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+                <button id="location-btn"><i class="fas fa-location-arrow"></i></button>
+            </div>
+        </header>
+
+        <main>
+            <section class="current-weather">
+                <div class="weather-main">
+                    <h2 id="city-name">--</h2>
+                    <div class="temp-container">
+                        <img id="weather-icon" src="" alt="Weather icon">
+                        <p id="temperature">--°C</p>
+                    </div>
+                    <p id="description">--</p>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail">
+                        <i class="fas fa-tint"></i>
+                        <p id="humidity">--%</p>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-wind"></i>
+                        <p id="wind">-- km/h</p>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-smog"></i>
+                        <p id="aqi">--</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sun-times">
+                <div class="sun-card">
+                    <i class="fas fa-sunrise"></i>
+                    <p id="sunrise">--:--</p>
+                </div>
+                <div class="sun-card">
+                    <i class="fas fa-sunset"></i>
+                    <p id="sunset">--:--</p>
+                </div>
+            </section>
+
+            <section class="clothing-recommendation">
+                <h3><i class="fas fa-tshirt"></i> What to Wear</h3>
+                <p id="clothing-advice">Enter a city to get clothing recommendations</p>
+            </section>
+
+            <section class="forecast">
+                <h3><i class="fas fa-calendar-alt"></i> 5-Day Forecast</h3>
+                <div id="forecast-list" class="forecast-list"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
