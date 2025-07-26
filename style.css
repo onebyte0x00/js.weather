@@ -213,8 +213,13 @@ button:hover {
     padding: 15px 5px;
     scrollbar-width: thin;
     scrollbar-color: rgba(255,255,255,0.5) transparent;
+    /* Prevent wrapping to new line */
+    flex-wrap: nowrap;
+    /* Enable horizontal scrolling if needed */
+    white-space: nowrap;
 }
 
+/* Webkit browsers scrollbar styling */
 .forecast-list::-webkit-scrollbar {
     height: 6px;
 }
@@ -230,24 +235,13 @@ button:hover {
     backdrop-filter: blur(5px);
     padding: 15px;
     border-radius: 12px;
-    display: flex;
+    display: inline-flex; /* Changed from flex to inline-flex */
     flex-direction: column;
     align-items: center;
     gap: 10px;
     transition: transform 0.3s;
-}
-
-.forecast-day:hover {
-    transform: translateY(-5px);
-}
-
-.forecast-day p:first-child {
-    font-weight: bold;
-}
-
-.forecast-day img {
-    width: 50px;
-    height: 50px;
+    /* Prevent items from shrinking */
+    flex-shrink: 0;
 }
 
 /* Dynamic background classes */
