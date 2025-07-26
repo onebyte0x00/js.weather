@@ -1,0 +1,234 @@
+:root {
+    --sunny-bg: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    --rainy-bg: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+    --cloudy-bg: linear-gradient(135deg, #bdc3c7 0%, #2c3e50 100%);
+    --snowy-bg: linear-gradient(135deg, #e6e9f0 0%, #eef1f5 100%);
+    --night-bg: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    padding: 20px;
+    transition: background 0.5s ease;
+}
+
+.weather-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#city-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #357abd;
+    transform: scale(1.05);
+}
+
+.current-weather {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.weather-main {
+    margin-bottom: 20px;
+}
+
+.weather-main h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.temp-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+#weather-icon {
+    width: 80px;
+    height: 80px;
+}
+
+#temperature {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#description {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.detail i {
+    font-size: 1.5rem;
+    color: #4a90e2;
+}
+
+.sun-times {
+    display: flex;
+    justify-content: space-around;
+    margin: 25px 0;
+}
+
+.sun-card {
+    background-color: rgba(74, 144, 226, 0.1);
+    padding: 15px 25px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.sun-card i {
+    font-size: 1.8rem;
+    color: #f39c12;
+}
+
+.clothing-recommendation {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.clothing-recommendation h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#clothing-advice {
+    font-size: 1.1rem;
+}
+
+.forecast {
+    margin-top: 20px;
+}
+
+.forecast h3 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.forecast-list {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.forecast-day {
+    min-width: 120px;
+    background-color: rgba(74, 144, 226, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Dynamic background classes */
+.sunny-bg {
+    background: var(--sunny-bg);
+    color: #333;
+}
+
+.rainy-bg {
+    background: var(--rainy-bg);
+    color: white;
+}
+
+.cloudy-bg {
+    background: var(--cloudy-bg);
+    color: white;
+}
+
+.snowy-bg {
+    background: var(--snowy-bg);
+    color: #333;
+}
+
+.night-bg {
+    background: var(--night-bg);
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .weather-details, .sun-times {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .forecast-list {
+        flex-direction: column;
+    }
+    
+    .forecast-day {
+        width: 100%;
+    }
+}
