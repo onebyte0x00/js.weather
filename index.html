@@ -29,30 +29,47 @@
                     <p id="description">--</p>
                 </div>
 
-                <div class="weather-details">
-                    <div class="detail">
+                <div class="weather-stats">
+                    <div class="stat-card">
                         <i class="fas fa-tint"></i>
-                        <p id="humidity">--%</p>
+                        <div>
+                            <p class="stat-value" id="humidity">--%</p>
+                            <p class="stat-label">Humidity</p>
+                        </div>
                     </div>
-                    <div class="detail">
+                    <div class="stat-card">
                         <i class="fas fa-wind"></i>
-                        <p id="wind">-- km/h</p>
+                        <div>
+                            <p class="stat-value" id="wind">-- km/h</p>
+                            <p class="stat-label">Wind</p>
+                        </div>
                     </div>
-                    <div class="detail">
+                    <div class="stat-card">
                         <i class="fas fa-smog"></i>
-                        <p id="aqi">--</p>
+                        <div>
+                            <p class="stat-value" id="aqi">--</p>
+                            <p class="stat-label">Air Quality</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section class="sun-times">
-                <div class="sun-card">
-                    <i class="fas fa-sunrise"></i>
-                    <p id="sunrise">--:--</p>
-                </div>
-                <div class="sun-card">
-                    <i class="fas fa-sunset"></i>
-                    <p id="sunset">--:--</p>
+            <section class="sun-times-container">
+                <div class="sun-times">
+                    <div class="sun-card">
+                        <i class="fas fa-sunrise"></i>
+                        <div>
+                            <p class="sun-value" id="sunrise">--:--</p>
+                            <p class="sun-label">Sunrise</p>
+                        </div>
+                    </div>
+                    <div class="sun-card">
+                        <i class="fas fa-sunset"></i>
+                        <div>
+                            <p class="sun-value" id="sunset">--:--</p>
+                            <p class="sun-label">Sunset</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -61,7 +78,7 @@
                 <p id="clothing-advice">Enter a city to get clothing recommendations</p>
             </section>
 
-            <section class="forecast">
+            <section class="forecast-container">
                 <h3><i class="fas fa-calendar-alt"></i> 5-Day Forecast</h3>
                 <div id="forecast-list" class="forecast-list"></div>
             </section>
